@@ -1,0 +1,27 @@
+package bentuk;
+
+import java.util.Scanner;
+
+public class Segitiga {
+	private double alas, tinggi, miring, luas, keliling;
+
+	Scanner input = new Scanner(System.in);
+
+	public Segitiga(){
+		System.out.print("Masukkan Alas : ");
+		alas = input.nextInt();
+		System.out.print("Masukkan Tinggi : ");
+		tinggi = input.nextInt();
+	}
+
+	public double luasSegitiga(){
+		luas = 0.5 * alas * tinggi;
+		return luas;
+	}
+
+	public double kelilingSegitiga(){
+		miring = Math.sqrt(Math.pow(tinggi, 2) + Math.pow(alas, 2));
+		keliling = alas + tinggi + miring;
+		return keliling;
+	}
+}
